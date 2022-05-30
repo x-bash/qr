@@ -5,10 +5,10 @@ ___x_cmd_qr(){
     local op="${1}";
 
     case "$op" in
-        enc)    shift 1; ___x_cmd_qr_enc "$@" ;;
-        dec)    shift 1; ___x_cmd_qr_dec "$@" ;;
-        *://*)  ___x_cmd_qr_enc_default "$op" ;;
-        "")     # decode from file, like
+        enc)    shift 1; ___x_cmd_qr_enc               "$@"  ;;
+        dec)    shift 1; ___x_cmd_qr_dec               "$@"  ;;
+        *://*)           ___x_cmd_qr_enc_default       "$op" ;;
+        *)               ___x_cmd___qr_origin          "$@"  ;;
     esac
 }
 
