@@ -13,7 +13,7 @@ ___x_cmd_qr(){
 }
 
 ___x_cmd___qr_origin(){
-    x pkg xbin init qr ___x_cmd___qr_origin || return
+    x pkg xbin init qrencode ""  "___x_cmd___qr_origin" || return
     ___x_cmd___qr_origin "$@"
 }
 
